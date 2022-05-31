@@ -256,7 +256,7 @@ int main(void)
 				}
 			}
 			//---------과정-----------------------
-			if (key >= 1) {
+			if (key >= 10) {
 				map[stage][18][29] = 5;
 				if (map[stage][player.y][player.x / 2] == 5) {//--------맵이동
 					stage = stage + 1;
@@ -402,7 +402,7 @@ int main(void)
 			printf("열쇠 수: %d \n", key);
 			gotoxy(50, 22);
 			printf("스테이지: %d \n", stage + 1);
-			if (key >= 1) {
+			if (key >= 10) {
 				gotoxy(25, 10);
 				printf("문이 열렸습니다.");
 			}
