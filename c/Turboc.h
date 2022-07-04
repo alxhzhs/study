@@ -1,5 +1,5 @@
-// È¥ÀÚ ¿¬±¸ÇÏ´Â C/C++ÀÇ µµ¿ì¹Ì Çì´õ ÆÄÀÏ
-// ºñÁÖ¾ó C++ È¯°æ¿¡¼­ ÅÍº¸ C ½ºÅ¸ÀÏÀÇ ÇÔ¼ö¸¦ Á¤ÀÇÇÑ´Ù.
+// í˜¼ì ì—°êµ¬í•˜ëŠ” C/C++ì˜ ë„ìš°ë¯¸ í—¤ë” íŒŒì¼
+// ë¹„ì£¼ì–¼ C++ í™˜ê²½ì—ì„œ í„°ë³´ C ìŠ¤íƒ€ì¼ì˜ í•¨ìˆ˜ë¥¼ ì •ì˜í•œë‹¤.
 #ifndef TURBOC_HEADER
 #define TURBOC_HEADER
 
@@ -16,20 +16,20 @@ int wherex();
 int wherey();
 void setcursortype(CURSOR_TYPE c);
 
-#define delay(n) Sleep(n)							// n/1000ÃÊ¸¸Å­ ½Ã°£ Áö¿¬
-#define randomize() srand((unsigned)time(NULL))		// ³­¼ö ¹ß»ı±â ÃÊ±âÈ­
-#define random(n) (rand() % (n))					//0~n±îÁöÀÇ ³­¼ö ¹ß»ı
+#define delay(n) Sleep(n)							// n/1000ì´ˆë§Œí¼ ì‹œê°„ ì§€ì—°
+#define randomize() srand((unsigned)time(NULL))		// ë‚œìˆ˜ ë°œìƒê¸° ì´ˆê¸°í™”
+#define random(n) (rand() % (n))					//0~nê¹Œì§€ì˜ ë‚œìˆ˜ ë°œìƒ
 
-// ÀÌ ¸ÅÅ©·Î°¡ Á¤ÀÇµÇ¾î ÀÖÀ¸¸é ÇÔ¼öÀÇ ¿øÇü¸¸ ¼±¾ğÇÏ°í Á¤ÀÇ´Â ÇÏÁö ¾Ê´Â´Ù.
+// ì´ ë§¤í¬ë¡œê°€ ì •ì˜ë˜ì–´ ìˆìœ¼ë©´ í•¨ìˆ˜ì˜ ì›í˜•ë§Œ ì„ ì–¸í•˜ê³  ì •ì˜ëŠ” í•˜ì§€ ì•ŠëŠ”ë‹¤.
 #ifndef TURBOC_PROTOTYPE_ONLY
 
-// È­¸éÀ» ¸ğµÎ Áö¿î´Ù.
+// í™”ë©´ì„ ëª¨ë‘ ì§€ìš´ë‹¤.
 void clrscr()
 {
 	system("cls");
 }
 
-// Ä¿¼­¸¦ x,yÁÂÇ¥·Î ÀÌµ¿½ÃÅ²´Ù.
+// ì»¤ì„œë¥¼ x,yì¢Œí‘œë¡œ ì´ë™ì‹œí‚¨ë‹¤.
 void gotoxy(int x, int y)
 {
 	COORD Cur;
@@ -38,7 +38,7 @@ void gotoxy(int x, int y)
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Cur);
 }
 
-// Ä¿¼­ÀÇ x ÁÂÇ¥¸¦ Á¶»çÇÑ´Ù.
+// ì»¤ì„œì˜ x ì¢Œí‘œë¥¼ ì¡°ì‚¬í•œë‹¤.
 int wherex()
 {
 	CONSOLE_SCREEN_BUFFER_INFO BufInfo;
@@ -47,7 +47,7 @@ int wherex()
 	return BufInfo.dwCursorPosition.X;
 }
 
-// Ä¿¼­ÀÇ yÁÂÇ¥¸¦ Á¶»çÇÑ´Ù.
+// ì»¤ì„œì˜ yì¢Œí‘œë¥¼ ì¡°ì‚¬í•œë‹¤.
 int wherey()
 {
 	CONSOLE_SCREEN_BUFFER_INFO BufInfo;
@@ -56,7 +56,7 @@ int wherey()
 	return BufInfo.dwCursorPosition.Y;
 }
 
-// Ä¿¼­¸¦ ¼û±â°Å³ª ´Ù½Ã Ç¥½ÃÇÑ´Ù.
+// ì»¤ì„œë¥¼ ìˆ¨ê¸°ê±°ë‚˜ ë‹¤ì‹œ í‘œì‹œí•œë‹¤.
 void setcursortype(CURSOR_TYPE c)
 {
 	CONSOLE_CURSOR_INFO CurInfo;
